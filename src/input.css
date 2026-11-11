@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        background-color: #050b14;
+        background-image:
+            radial-gradient(circle at 50% 50%, rgba(13, 37, 56, 0.6) 0%, rgba(5, 11, 20, 1) 100%),
+            linear-gradient(to right, rgba(20, 184, 166, 0.03) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(20, 184, 166, 0.03) 1px, transparent 1px);
+        background-size: 100% 100%, 40px 40px, 40px 40px;
+        background-attachment: fixed;
+    }
+
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #050b14;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #112238;
+        border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #14b8a6;
+    }
+
+    :focus-visible {
+        outline: 2px solid #14b8a6;
+        outline-offset: 2px;
+    }
+}
+
+@layer components {
+    .ambient-glow {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        pointer-events: none;
+        z-index: 0;
+        background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(20, 184, 166, 0.08), transparent 40%);
+    }
+
+    .glass-card {
+        position: relative;
+        background: rgba(10, 20, 36, 0.7);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(20, 184, 166, 0.12);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .glass-card::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        padding: 1px;
+        background: radial-gradient(500px circle at var(--card-mouse-x, 0px) var(--card-mouse-y, 0px), rgba(16, 185, 129, 0.4), transparent 40%);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .glass-card:hover::before {
+        opacity: 1;
+    }
+
+    .glass-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 30px -10px rgba(4, 30, 43, 0.7);
+    }
+
+    .cursor-blink {
+        animation: blink 1s infinite;
+    }
+
+    .skip-link {
+        position: absolute;
+        left: -9999px;
+        top: 0;
+        z-index: 100;
+        background: #14b8a6;
+        color: #020617;
+        padding: 0.75rem 1rem;
+        border-radius: 0.5rem;
+        font-family: 'Fira Code', ui-monospace, monospace;
+        font-size: 0.75rem;
+        font-weight: 600;
+    }
+
+    .skip-link:focus {
+        position: fixed;
+        left: 1rem;
+        top: 1rem;
+    }
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .cursor-blink,
+    .animate-ping {
+        animation: none;
+    }
+
+    .glass-card:hover {
+        transform: none;
+    }
+}

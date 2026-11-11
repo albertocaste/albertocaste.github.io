@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alberto Castellanos Martínez — CV</title>
+    <meta name="author" content="Alberto Castellanos Martínez">
+    <meta name="description" content="CV de Alberto Castellanos Martínez, Product Engineer (AI Support) & Tech Lead.">
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        body {
+            margin: 0;
+            background: #ffffff;
+            color: #1f2937;
+            font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+            font-size: 10.1pt;
+            line-height: 1.42;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 13mm 15mm 12mm;
+            margin: 0 auto;
+        }
+
+        header {
+            border-bottom: 2px solid #0f766e;
+            padding-bottom: 9px;
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 23pt;
+            line-height: 1.05;
+            letter-spacing: -0.4px;
+            color: #0f172a;
+        }
+
+        .role {
+            margin-top: 3px;
+            font-size: 11.5pt;
+            font-weight: 600;
+            color: #0f766e;
+        }
+
+        .contact {
+            margin-top: 7px;
+            font-size: 8.8pt;
+            color: #4b5563;
+        }
+
+        .contact a {
+            color: #0f766e;
+            text-decoration: none;
+        }
+
+        .contact span {
+            color: #9ca3af;
+            padding: 0 4px;
+        }
+
+        section {
+            margin-top: 11px;
+        }
+
+        h2 {
+            margin: 0 0 6px;
+            padding-bottom: 3px;
+            border-bottom: 1px solid #d1d5db;
+            font-size: 9.3pt;
+            font-weight: 700;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+            color: #0f766e;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .job {
+            margin-bottom: 9px;
+            break-inside: avoid;
+        }
+
+        .job:last-child {
+            margin-bottom: 0;
+        }
+
+        .job-head {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .job-title {
+            font-size: 10.4pt;
+            font-weight: 700;
+            color: #111827;
+        }
+
+        .job-company {
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .job-meta {
+            flex: 0 0 auto;
+            font-size: 8.7pt;
+            color: #6b7280;
+            white-space: nowrap;
+        }
+
+        ul {
+            margin: 3px 0 0;
+            padding-left: 15px;
+        }
+
+        li {
+            margin-bottom: 2px;
+        }
+
+        .edu-item,
+        .lang-item {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 3px;
+            break-inside: avoid;
+        }
+
+        .edu-title {
+            font-weight: 600;
+            color: #111827;
+        }
+
+        .edu-meta {
+            flex: 0 0 auto;
+            font-size: 8.7pt;
+            color: #6b7280;
+            white-space: nowrap;
+        }
+
+        .skills p {
+            margin-bottom: 3px;
+        }
+
+        .skills strong {
+            color: #111827;
+        }
+
+        .extra {
+            margin-top: 9px;
+            font-size: 8.7pt;
+            color: #6b7280;
+        }
+
+        .extra strong {
+            color: #374151;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header>
+            <h1>Alberto Castellanos Martínez</h1>
+            <div class="role">Product Engineer (AI Support) &amp; Tech Lead</div>
+            <div class="contact">
+                Madrid
+                <span>|</span>
+                <a href="mailto:caste_acm@hotmail.com">caste_acm@hotmail.com</a>
+                <span>|</span>
+                <a href="https://linkedin.com/in/alberto-castellanos-martinez">linkedin.com/in/alberto-castellanos-martinez</a>
+                <span>|</span>
+                <a href="https://github.com/albertocaste">github.com/albertocaste</a>
+            </div>
+        </header>
+
+        <section>
+            <h2>Perfil</h2>
+            <p>
+                Product Engineer y Tech Lead con más de 8 años de experiencia construyendo productos web de principio a fin.
+                Especializado en arquitectura backend distribuida, SDKs TypeScript, orquestación de agentes de IA y MCP.
+                Lidero el desarrollo de un asistente de atención al cliente con IA en producción, desde el descubrimiento
+                del problema de negocio hasta el despliegue y la medición del impacto real.
+            </p>
+        </section>
+
+        <section>
+            <h2>Experiencia profesional</h2>
+
+            <div class="job">
+                <div class="job-head">
+                    <div>
+                        <div class="job-title">Product Engineer (AI Support) &amp; Tech Lead</div>
+                        <div class="job-company">Civitatis · Madrid</div>
+                    </div>
+                    <div class="job-meta">2024 – Presente</div>
+                </div>
+                <ul>
+                    <li>Liderazgo técnico y ejecución end-to-end del asistente de atención al cliente con IA: descubrimiento, arquitectura, desarrollo, despliegue y métricas.</li>
+                    <li>Diseño y desarrollo de un SDK de chat en TypeScript publicado como paquetes versionados en monorepo pnpm, con capa de transporte agnóstica del framework y bindings para React.</li>
+                    <li>Widget conversacional en Next.js integrado en páginas de producto, con degradación elegante y handoff a agentes humanos preservando el contexto completo.</li>
+                    <li>Backoffice de analítica en React para auditoría de conversaciones, tasa de resolución autónoma, satisfacción y filtros avanzados de telemetría.</li>
+                    <li>Arquitecturas backend resilientes: arquitectura hexagonal, idempotencia, manejo de concurrencia (HTTP 409) y patrones de compensación en operaciones críticas.</li>
+                    <li>APIs contract-first con OpenAPI/AsyncAPI y validación en runtime con Zod; observabilidad con Grafana, Loki y Sentry.</li>
+                    <li>Optimización del flujo de ingeniería mediante agentes de IA, flujos spec-driven (Gherkin, ATDD/TDD) e integración de herramientas corporativas con MCP.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-head">
+                    <div>
+                        <div class="job-title">Full Stack Senior Developer / Tech Lead</div>
+                        <div class="job-company">Uniway Technologies · Madrid</div>
+                    </div>
+                    <div class="job-meta">Septiembre 2018 – 2023</div>
+                </div>
+                <ul>
+                    <li>Liderazgo del desarrollo en líneas de negocio clave: e-commerce multicloud, aplicación web para clientes e intranet corporativa.</li>
+                    <li>Toma de requisitos, gestión de equipo, definición de arquitectura, estimación y planificación de hitos.</li>
+                    <li>Transición hacia Clean Architecture (vertical slicing), DDD y orquestación de procesos de negocio con Camunda BPMN.</li>
+                    <li>Integración de e-commerce Magento con ERP Sage 200; automatización de procesos y servicios SaaS con estándar BPMN.</li>
+                    <li>CI/CD con Jenkins, versionado semántico con GitFlow, calidad con SonarQube y despliegues con Docker y Ansible AWX.</li>
+                    <li>Servicios multicloud (AWS, Azure, Google Cloud, OVH y VMware), monitorización y métricas con Elastic Stack e InfluxDB.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-head">
+                    <div>
+                        <div class="job-title">Full Stack Developer</div>
+                        <div class="job-company">GreenByte (Global Solutions) · Madrid</div>
+                    </div>
+                    <div class="job-meta">Febrero 2018 – Septiembre 2018</div>
+                </div>
+                <ul>
+                    <li>Desarrollo de microservicios y aplicaciones con stacks tecnológicos heterogéneos.</li>
+                    <li>APIs RESTful con Django/Python y frontend móvil con React Native.</li>
+                    <li>Creación y mantenimiento de sitios web con Prestashop y WordPress.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-head">
+                    <div>
+                        <div class="job-title">Full Stack Junior Developer</div>
+                        <div class="job-company">NWCyO · Madrid</div>
+                    </div>
+                    <div class="job-meta">Diciembre 2017 – Febrero 2018</div>
+                </div>
+                <ul>
+                    <li>Desarrollo de una aplicación web y móvil de pedidos a domicilio con Vue.</li>
+                    <li>Bases del desarrollo web: HTML, CSS, JavaScript, maquetación responsive, WordPress y mailing.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Formación</h2>
+            <div class="edu-item">
+                <div class="edu-title">Formación continua: Arquitectura Hexagonal, DDD, TDD y Refactoring de Code Smells — Codely</div>
+                <div class="edu-meta">2023 – Actualidad</div>
+            </div>
+            <div class="edu-item">
+                <div class="edu-title">Curso de Formación Avanzada en ElasticSearch — Imagina Formación</div>
+                <div class="edu-meta">2021</div>
+            </div>
+            <div class="edu-item">
+                <div class="edu-title">Formación complementaria online — Udemy</div>
+                <div class="edu-meta">2020</div>
+            </div>
+            <div class="edu-item">
+                <div class="edu-title">Máster en Diseño Gráfico, Diseño y Desarrollo Web — Escuela Trazos</div>
+                <div class="edu-meta">2015 – 2017</div>
+            </div>
+            <div class="edu-item">
+                <div class="edu-title">Grado en Ciencia y Tecnología de la Edificación — Universidad de Alcalá</div>
+                <div class="edu-meta">2009 – 2014</div>
+            </div>
+        </section>
+
+        <section class="skills">
+            <h2>Competencias técnicas</h2>
+            <p><strong>Lenguajes:</strong> TypeScript, JavaScript, PHP, Python, SQL, HTML, CSS/Sass.</p>
+            <p><strong>Frontend:</strong> React, Next.js, Vue, Angular, React Native, Tailwind CSS, Bootstrap.</p>
+            <p><strong>Backend:</strong> Node.js, Symfony/Laravel, Django, APIs REST y streaming, arquitectura hexagonal, DDD.</p>
+            <p><strong>Datos:</strong> MySQL, ElasticSearch, Redis, InfluxDB.</p>
+            <p><strong>Plataforma y DevOps:</strong> Docker, Kubernetes, Tilt, Jenkins, GitHub Actions, Ansible AWX, SonarQube, Git/GitFlow.</p>
+            <p><strong>IA y tooling:</strong> MCP, Claude Code, agentes de IA, spec-driven development (ATDD/TDD), OpenAPI/AsyncAPI, Zod.</p>
+            <p><strong>Observabilidad:</strong> Grafana, Loki, Sentry, Elastic Stack.</p>
+            <p><strong>Cloud:</strong> AWS, Azure, Google Cloud, OVH, VMware.</p>
+            <p><strong>Otros:</strong> Camunda BPMN, Node-RED, Conductor, Magento, Prestashop, WordPress, Sage 200, Photoshop.</p>
+        </section>
+
+        <section>
+            <h2>Idiomas</h2>
+            <div class="lang-item">
+                <div>Español: nativo · Catalán: nativo · Inglés: intermedio (B1–B2)</div>
+            </div>
+        </section>
+
+        <div class="extra">
+            <strong>Aficiones:</strong> videojuegos, bici, teatro, pádel y cine.
+        </div>
+    </div>
+</body>
+</html>
