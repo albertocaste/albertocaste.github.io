@@ -114,7 +114,7 @@
     }
 
     .glass-card:hover {
-        transform: translateY(-3px);
+        transform: perspective(700px) translateY(-3px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
         border-color: rgba(16, 185, 129, 0.25);
         box-shadow: 0 14px 34px -12px rgba(3, 20, 32, 0.8);
     }
@@ -123,73 +123,32 @@
         animation: blink 1s infinite;
     }
 
-    .orbit-wrap {
-        position: relative;
-        display: inline-block;
-        margin-bottom: 4rem;
+    .hero-art {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+        z-index: 1;
     }
 
-    .orbit-tilt {
-        position: relative;
-        transform-style: preserve-3d;
-        transform: perspective(700px) rotateX(var(--oy, 0deg)) rotateY(var(--ox, 0deg));
+    .hero-art img {
+        width: min(78vh, 680px);
+        height: auto;
+        opacity: 0.65;
+        mix-blend-mode: screen;
+        filter: brightness(0.85) saturate(1.05);
+        -webkit-mask-image: radial-gradient(circle at 50% 48%, rgba(0, 0, 0, 1) 34%, rgba(0, 0, 0, 0) 72%);
+        mask-image: radial-gradient(circle at 50% 48%, rgba(0, 0, 0, 1) 34%, rgba(0, 0, 0, 0) 72%);
         will-change: transform;
     }
 
-    .orbit {
+    .hero-art::after {
+        content: '';
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        border-radius: 9999px;
-        pointer-events: none;
-        animation: orbit-spin 16s linear infinite;
-    }
-
-    .orbit-1 {
-        width: 160px;
-        height: 160px;
-        border: 1px dashed rgba(16, 185, 129, 0.4);
-    }
-
-    .orbit-2 {
-        width: 206px;
-        height: 206px;
-        border: 1px solid rgba(236, 72, 153, 0.3);
-        animation-duration: 24s;
-        animation-direction: reverse;
-    }
-
-    .orbit-3 {
-        width: 252px;
-        height: 252px;
-        border: 1px dashed rgba(245, 158, 11, 0.28);
-        animation-duration: 32s;
-    }
-
-    .orbit-dot {
-        position: absolute;
-        top: -4px;
-        left: 50%;
-        width: 7px;
-        height: 7px;
-        border-radius: 9999px;
-        transform: translateX(-50%);
-    }
-
-    .dot-emerald {
-        background: #34d399;
-        box-shadow: 0 0 10px rgba(52, 211, 153, 0.9);
-    }
-
-    .dot-pink {
-        background: #ec4899;
-        box-shadow: 0 0 10px rgba(236, 72, 153, 0.9);
-    }
-
-    .dot-amber {
-        background: #f59e0b;
-        box-shadow: 0 0 10px rgba(245, 158, 11, 0.9);
+        inset: 0;
+        background: radial-gradient(circle at 50% 50%, rgba(5, 11, 20, 0.5) 0%, rgba(5, 11, 20, 0) 65%);
     }
 
     .skip-link {
@@ -300,42 +259,6 @@
         transform: scale(1.35);
     }
 
-    #cursorDot,
-    #cursorRing {
-        position: fixed;
-        left: 0;
-        top: 0;
-        pointer-events: none;
-        z-index: 80;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        border-radius: 9999px;
-    }
-
-    #cursorDot {
-        width: 7px;
-        height: 7px;
-        background: #34d399;
-    }
-
-    #cursorRing {
-        width: 38px;
-        height: 38px;
-        border: 1.5px solid rgba(236, 72, 153, 0.55);
-        transition: opacity 0.3s ease, width 0.25s ease, height 0.25s ease, border-color 0.25s ease;
-    }
-
-    #cursorDot.is-visible,
-    #cursorRing.is-visible {
-        opacity: 1;
-    }
-
-    #cursorRing.is-active {
-        width: 58px;
-        height: 58px;
-        border-color: rgba(52, 211, 153, 0.85);
-    }
-
     body.has-custom-cursor,
     body.has-custom-cursor a,
     body.has-custom-cursor button {
@@ -360,11 +283,6 @@
     50% { opacity: 0; }
 }
 
-@keyframes orbit-spin {
-    from { transform: translate(-50%, -50%) rotate(0deg); }
-    to { transform: translate(-50%, -50%) rotate(360deg); }
-}
-
 @keyframes hint-bounce {
     0%, 100% { transform: translateX(-50%) translateY(0); }
     50% { transform: translateX(-50%) translateY(7px); }
@@ -379,13 +297,6 @@
 .slide.in-view .reveal {
     opacity: 1;
     transform: translateY(0);
-}
-
-@media (pointer: coarse) {
-    #cursorDot,
-    #cursorRing {
-        display: none;
-    }
 }
 
 @media (max-width: 640px) {
@@ -438,8 +349,7 @@
 
     .animate-ping,
     .cursor-blink,
-    .scroll-hint,
-    .orbit {
+    .scroll-hint {
         animation: none;
     }
 
@@ -448,8 +358,7 @@
     }
 
     #fx,
-    #cursorDot,
-    #cursorRing {
+    .hero-art {
         display: none;
     }
 
