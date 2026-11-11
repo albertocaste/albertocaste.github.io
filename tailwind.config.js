@@ -9,10 +9,12 @@ module.exports = {
                     bg: '#050b14',
                     card: '#0a1424',
                     border: '#112238',
-                    teal: '#14b8a6',
                     emerald: '#10b981',
-                    cyan: '#06b6d4',
-                    blue: '#3b82f6'
+                    mint: '#34d399',
+                    amber: '#f59e0b',
+                    orange: '#fb923c',
+                    pink: '#ec4899',
+                    rose: '#f43f5e'
                 }
             },
             fontFamily: {

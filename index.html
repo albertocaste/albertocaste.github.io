@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alberto Castellanos Martínez | Product Engineer & Tech Lead</title>
-    <meta name="description" content="Product Engineer & Tech Lead. Diseño y construyo productos de 0 a 1: arquitectura, backend, frontend, orquestación de IA y despliegue en producción con impacto medible.">
+    <meta name="description" content="Product Engineer & Tech Lead. Construyo productos de 0 a 1: arquitectura, backend, frontend, orquestación de IA y despliegue en producción con impacto medible.">
     <meta name="author" content="Alberto Castellanos Martínez">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#050b14">
@@ -15,13 +15,16 @@
     <meta property="og:url" content="https://albertocaste.github.io/">
     <meta property="og:title" content="Alberto Castellanos Martínez | Product Engineer & Tech Lead">
     <meta property="og:description" content="Del problema de negocio al impacto real: arquitectura, backend, frontend e IA en producción.">
+    <meta property="og:image" content="https://albertocaste.github.io/assets/avatar.jpg">
     <meta property="og:locale" content="es_ES">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Alberto Castellanos Martínez | Product Engineer & Tech Lead">
     <meta name="twitter:description" content="Del problema de negocio al impacto real: arquitectura, backend, frontend e IA en producción.">
+    <meta name="twitter:image" content="https://albertocaste.github.io/assets/avatar.jpg">
 
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23050b14'/%3E%3Cpath d='M17 23l11 9-11 9' stroke='%2314b8a6' stroke-width='5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M35 41h12' stroke='%2310b981' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23050b14'/%3E%3Cpath d='M17 23l11 9-11 9' stroke='%2310b981' stroke-width='5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M35 41h12' stroke='%23ec4899' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
 
+    <link rel="preload" as="image" href="assets/avatar.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -35,6 +38,7 @@
         "jobTitle": "Product Engineer & Tech Lead",
         "url": "https://albertocaste.github.io/",
         "email": "mailto:caste_acm@hotmail.com",
+        "image": "https://albertocaste.github.io/assets/avatar.jpg",
         "sameAs": [
             "https://github.com/albertocaste",
             "https://linkedin.com/in/alberto-castellanos-martinez"
@@ -42,26 +46,26 @@
     }
     </script>
 </head>
-<body class="text-slate-200 font-sans antialiased relative selection:bg-cyber-teal selection:text-slate-950">
+<body class="text-slate-200 font-sans antialiased selection:bg-cyber-emerald selection:text-slate-950">
 
-    <a href="#about" class="skip-link">Saltar al contenido</a>
+    <a href="#hero" class="skip-link">Saltar al contenido</a>
 
+    <canvas id="fx" aria-hidden="true"></canvas>
     <div class="ambient-glow" id="ambientGlow" aria-hidden="true"></div>
+    <div class="blob blob-emerald" data-depth="22" aria-hidden="true"></div>
+    <div class="blob blob-amber" data-depth="12" aria-hidden="true"></div>
+    <div class="blob blob-pink" data-depth="-16" aria-hidden="true"></div>
+
+    <div id="cursorDot" aria-hidden="true"></div>
+    <div id="cursorRing" aria-hidden="true"></div>
+
+    <div class="progress" id="progress" aria-hidden="true"></div>
 
     <header class="fixed top-4 inset-x-0 z-50 max-w-5xl mx-auto px-4">
-        <div class="relative bg-slate-950/80 backdrop-blur-xl border border-teal-900/40 rounded-2xl px-4 sm:px-6 h-14 flex items-center justify-between shadow-2xl">
-            <a href="#about" class="font-mono text-sm tracking-tight text-white hover:text-cyber-teal transition flex items-center gap-2">
-                <span class="text-cyber-emerald" aria-hidden="true">&gt;</span> alberto_castellanos<span class="cursor-blink text-cyber-teal" aria-hidden="true">_</span>
+        <div class="bg-slate-950/70 backdrop-blur-xl border border-cyber-border/60 rounded-2xl px-4 sm:px-6 h-14 flex items-center justify-between shadow-2xl">
+            <a href="#hero" id="logo" class="font-mono text-sm tracking-tight text-white hover:text-cyber-emerald transition flex items-center gap-2">
+                <span class="text-cyber-emerald" aria-hidden="true">&gt;</span> alberto_castellanos<span class="cursor-blink text-cyber-emerald" aria-hidden="true">_</span>
             </a>
-
-            <nav class="hidden md:flex space-x-6 font-mono text-xs text-slate-400" aria-label="Navegación principal">
-                <a href="#about" data-nav class="hover:text-cyber-teal transition">// 01. perfil</a>
-                <a href="#ai-assistant" data-nav class="hover:text-cyber-teal transition">// 02. proyecto</a>
-                <a href="#proceso" data-nav class="hover:text-cyber-teal transition">// 03. proceso</a>
-                <a href="#trayectoria" data-nav class="hover:text-cyber-teal transition">// 04. trayectoria</a>
-                <a href="#stack" data-nav class="hover:text-cyber-teal transition">// 05. stack</a>
-            </nav>
-
             <div class="flex items-center space-x-1 sm:space-x-3 text-sm">
                 <a href="https://github.com/albertocaste" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="text-slate-400 hover:text-white transition p-2">
                     <svg class="w-4 h-4" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
@@ -69,438 +73,470 @@
                 <a href="https://linkedin.com/in/alberto-castellanos-martinez" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="text-slate-400 hover:text-white transition p-2">
                     <svg class="w-4 h-4" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>
                 </a>
-                <a href="mailto:caste_acm@hotmail.com" class="hidden sm:inline-flex bg-cyber-teal/10 hover:bg-cyber-teal/20 border border-cyber-teal/40 text-cyber-teal font-mono text-xs px-3 py-1.5 rounded-lg transition">./contact.sh</a>
-                <button id="menuToggle" type="button" class="md:hidden text-slate-300 hover:text-white p-2 rounded-lg border border-transparent hover:border-teal-900/60 transition" aria-expanded="false" aria-controls="mobileMenu" aria-label="Abrir menú de navegación">
-                    <svg id="menuIconOpen" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-                    <svg id="menuIconClose" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
-                </button>
-            </div>
-
-            <div id="mobileMenu" class="hidden md:hidden absolute top-full mt-2 inset-x-0 bg-slate-950/95 backdrop-blur-xl border border-teal-900/40 rounded-2xl p-3 shadow-2xl">
-                <nav class="flex flex-col font-mono text-xs text-slate-300" aria-label="Navegación móvil">
-                    <a href="#about" class="px-3 py-3 rounded-lg hover:bg-teal-950/60 hover:text-cyber-teal transition">// 01. perfil</a>
-                    <a href="#ai-assistant" class="px-3 py-3 rounded-lg hover:bg-teal-950/60 hover:text-cyber-teal transition">// 02. proyecto</a>
-                    <a href="#proceso" class="px-3 py-3 rounded-lg hover:bg-teal-950/60 hover:text-cyber-teal transition">// 03. proceso</a>
-                    <a href="#trayectoria" class="px-3 py-3 rounded-lg hover:bg-teal-950/60 hover:text-cyber-teal transition">// 04. trayectoria</a>
-                    <a href="#stack" class="px-3 py-3 rounded-lg hover:bg-teal-950/60 hover:text-cyber-teal transition">// 05. stack</a>
-                    <a href="#contacto" class="mt-1 px-3 py-3 rounded-lg bg-cyber-teal/10 border border-cyber-teal/30 text-cyber-teal transition">./contact.sh</a>
-                </nav>
+                <a href="assets/Alberto_Castellanos_Martinez_CV.pdf" download class="hidden sm:inline-flex bg-cyber-emerald/10 hover:bg-cyber-emerald/20 border border-cyber-emerald/40 text-cyber-emerald font-mono text-xs px-3 py-1.5 rounded-lg transition">./cv.pdf</a>
+                <a href="mailto:caste_acm@hotmail.com" class="hidden sm:inline-flex bg-cyber-pink/10 hover:bg-cyber-pink/20 border border-cyber-pink/40 text-cyber-pink font-mono text-xs px-3 py-1.5 rounded-lg transition">./contact.sh</a>
             </div>
         </div>
     </header>
 
-    <main class="relative z-10 pt-32">
+    <nav class="dots" id="dots" aria-label="Progreso de la página"></nav>
 
-        <section id="about" class="max-w-5xl mx-auto px-4 py-16 md:py-24">
-            <div class="reveal inline-flex items-center gap-3 px-3.5 py-1.5 rounded-full bg-teal-950/60 border border-teal-500/30 font-mono text-xs text-cyber-emerald mb-8 shadow-inner">
-                <span class="flex h-2 w-2 relative">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyber-emerald opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-cyber-emerald"></span>
-                </span>
-                <span>Product Engineer &amp; Tech Lead · Civitatis</span>
-            </div>
+    <div id="stage">
+        <div id="track">
 
-            <h1 class="reveal text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
-                Construyo productos <br>
-                <span class="bg-gradient-to-r from-cyber-emerald via-cyber-teal to-cyber-cyan bg-clip-text text-transparent">
-                    de 0 a 1 con cultura AI-First.
-                </span>
-            </h1>
-
-            <p class="reveal text-slate-400 text-lg sm:text-xl max-w-3xl mb-10 leading-relaxed font-light">
-                Entiendo el problema de negocio, diseño la arquitectura, construyo backend y frontend, despliego en producción y valido la mejora de impacto real en el cliente.
-            </p>
-
-            <div class="reveal glass-card rounded-xl p-5 font-mono text-xs sm:text-sm text-slate-300 mb-10 max-w-3xl shadow-2xl">
-                <div class="flex items-center gap-2 mb-3 pb-3 border-b border-teal-950/80 text-slate-500">
-                    <span class="w-3 h-3 rounded-full bg-emerald-500/60 inline-block" aria-hidden="true"></span>
-                    <span class="w-3 h-3 rounded-full bg-teal-500/60 inline-block" aria-hidden="true"></span>
-                    <span class="w-3 h-3 rounded-full bg-cyan-500/60 inline-block" aria-hidden="true"></span>
-                    <span class="ml-2 text-xs">bash - alberto@dev-box:~</span>
-                </div>
-                <p class="text-slate-400"><span class="text-cyber-cyan">const</span> <span class="text-cyber-teal">engineer</span> = {</p>
-                <p class="pl-4 text-slate-300">role: <span class="text-emerald-300">'Product Engineer &amp; Tech Lead'</span>,</p>
-                <p class="pl-4 text-slate-300">core: [<span class="text-teal-300">'Distributed Systems'</span>, <span class="text-teal-300">'TypeScript SDKs'</span>, <span class="text-teal-300">'AI Orchestration'</span>, <span class="text-teal-300">'Clean Architecture'</span>],</p>
-                <p class="pl-4 text-slate-300">methodology: <span class="text-emerald-300">'Spec-Driven / MCP / TDD'</span>,</p>
-                <p class="pl-4 text-slate-300">focus: <span class="text-emerald-300">'Del problema de negocio al impacto medible'</span></p>
-                <p class="text-slate-400">};</p>
-            </div>
-
-            <div class="reveal flex flex-wrap gap-4 font-mono text-xs">
-                <a href="#ai-assistant" class="bg-cyber-teal text-slate-950 hover:bg-teal-300 px-6 py-3 rounded-lg font-bold transition flex items-center gap-2 shadow-lg shadow-cyber-teal/20">
-                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 17l6-6-6-6"/><path d="M12 19h8"/></svg>
-                    VER PROYECTO PRINCIPAL
-                </a>
-                <a href="#contacto" class="glass-card hover:bg-teal-950/40 text-slate-300 px-6 py-3 rounded-lg font-medium transition flex items-center gap-2">
-                    <svg class="w-4 h-4" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/></svg>
-                    CONTACTAR
-                </a>
-                <a href="assets/Alberto_Castellanos_Martinez_CV.pdf" download class="glass-card hover:bg-teal-950/40 text-slate-300 px-6 py-3 rounded-lg font-medium transition flex items-center gap-2">
-                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 19h16"/></svg>
-                    DESCARGAR CV
-                </a>
-            </div>
-        </section>
-
-        <section id="ai-assistant" class="max-w-5xl mx-auto px-4 py-12">
-            <div class="reveal glass-card rounded-2xl p-6 sm:p-10 relative overflow-hidden">
-                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
-                    <div>
-                        <span class="font-mono text-xs text-cyber-teal tracking-widest uppercase">// VERTICAL AI SUPPORT · CIVITATIS</span>
-                        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Asistente de Atención al Cliente con IA</h2>
+            <section class="slide" id="hero" data-label="Inicio">
+                <div class="slide-content max-w-5xl mx-auto px-4 w-full text-center">
+                    <div class="reveal inline-block rounded-full p-[3px] bg-gradient-to-tr from-cyber-emerald via-cyber-orange to-cyber-pink shadow-lg shadow-cyber-pink/20 mb-8" data-depth="14">
+                        <img src="assets/avatar.jpg" alt="Foto de Alberto Castellanos Martínez" width="112" height="112" class="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover object-top bg-slate-950">
                     </div>
-                    <span class="font-mono px-3 py-1 bg-cyber-emerald/10 border border-cyber-emerald/30 text-cyber-emerald rounded-full text-xs font-semibold whitespace-nowrap">
-                        PRODUCTION // SCALE
-                    </span>
+
+                    <div class="reveal inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-slate-950/70 border border-cyber-emerald/30 font-mono text-xs text-cyber-emerald mb-8">
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyber-emerald opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-cyber-emerald"></span>
+                        </span>
+                        <span>Product Engineer · Civitatis</span>
+                    </div>
+
+                    <h1 class="reveal text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight text-white leading-[1.05] mb-6" data-depth="6">
+                        Producto de
+                        <span class="bg-gradient-to-r from-cyber-emerald via-cyber-orange to-cyber-pink bg-clip-text text-transparent">0 a 1</span><br class="hidden sm:block">
+                        con cultura AI-First.
+                    </h1>
+
+                    <p class="reveal text-slate-400 text-lg sm:text-2xl max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+                        Arquitectura, backend, frontend e IA: del problema de negocio al impacto medible.
+                    </p>
+
+                    <div class="reveal flex flex-wrap justify-center gap-3 sm:gap-4 font-mono text-xs sm:text-sm">
+                        <a href="#proyecto" class="bg-cyber-emerald text-slate-950 hover:bg-cyber-mint px-6 py-3 rounded-xl font-bold transition shadow-lg shadow-cyber-emerald/25 flex items-center gap-2">
+                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 17l6-6-6-6"/><path d="M12 19h8"/></svg>
+                            VER PROYECTO
+                        </a>
+                        <a href="assets/Alberto_Castellanos_Martinez_CV.pdf" download class="glass-card hover:bg-emerald-950/30 text-slate-200 px-6 py-3 rounded-xl font-medium transition flex items-center gap-2">
+                            <svg class="w-4 h-4 text-cyber-emerald" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 19h16"/></svg>
+                            DESCARGAR CV
+                        </a>
+                        <a href="mailto:caste_acm@hotmail.com" class="glass-card hover:bg-pink-950/30 text-slate-200 px-6 py-3 rounded-xl font-medium transition flex items-center gap-2">
+                            <svg class="w-4 h-4 text-cyber-pink" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/></svg>
+                            CONTACTAR
+                        </a>
+                    </div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-slate-950/70 p-5 rounded-xl border border-teal-950/80">
-                        <div class="font-mono text-cyber-teal text-xs mb-2 font-semibold flex items-center gap-2">
-                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-5-9 5 9 5 9-5Z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg> SDK DE CHAT TYPESCRIPT
+                <div class="scroll-hint font-mono text-[10px] uppercase tracking-widest text-slate-500" aria-hidden="true">
+                    <span>scroll</span>
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+            </section>
+
+            <section class="slide" id="proyecto" data-label="Proyecto">
+                <div class="slide-content max-w-5xl mx-auto px-4 w-full">
+                    <div class="reveal">
+                        <span class="font-mono text-xs text-cyber-amber tracking-[0.25em] uppercase">// VERTICAL AI SUPPORT · CIVITATIS</span>
+                        <h2 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mt-2 mb-10">Asistente de atención al cliente con IA</h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div class="reveal glass-card rounded-2xl p-6" style="--rd:.05s">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="text-cyber-emerald" aria-hidden="true"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8l-9-5-9 5 9 5 9-5Z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg></span>
+                                <h3 class="text-xl font-bold text-white">SDK de chat TypeScript</h3>
+                            </div>
+                            <p class="text-slate-400 text-sm leading-relaxed">Transporte agnóstico, streaming y reintentos resilientes en monorepo pnpm.</p>
                         </div>
-                        <p class="text-slate-300 text-sm leading-relaxed">
-                            Monorepo pnpm. Capa de transporte agnóstica con bindings para React. Gestión de streaming responses, reintentos, turnos huérfanos y cierres resilientes de conexión.
-                        </p>
-                    </div>
 
-                    <div class="bg-slate-950/70 p-5 rounded-xl border border-teal-950/80">
-                        <div class="font-mono text-cyber-teal text-xs mb-2 font-semibold flex items-center gap-2">
-                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg> WIDGET CONVERSACIONAL (NEXT.JS)
+                        <div class="reveal glass-card rounded-2xl p-6" style="--rd:.12s">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="text-cyber-orange" aria-hidden="true"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></span>
+                                <h3 class="text-xl font-bold text-white">Widget conversacional</h3>
+                            </div>
+                            <p class="text-slate-400 text-sm leading-relaxed">Next.js con zero-downtime y handoff que preserva el contexto.</p>
                         </div>
-                        <p class="text-slate-300 text-sm leading-relaxed">
-                            Integrado en fichas de producto con arquitectura zero-downtime (graceful degradation). Handoff continuo a plataformas externas de soporte preservando el contexto.
-                        </p>
-                    </div>
 
-                    <div class="bg-slate-950/70 p-5 rounded-xl border border-teal-950/80">
-                        <div class="font-mono text-cyber-teal text-xs mb-2 font-semibold flex items-center gap-2">
-                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15v-4M12 15V7M17 15v-6"/></svg> BACKOFFICE DE ANALÍTICA REACT
+                        <div class="reveal glass-card rounded-2xl p-6" style="--rd:.19s">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="text-cyber-pink" aria-hidden="true"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15v-4M12 15V7M17 15v-6"/></svg></span>
+                                <h3 class="text-xl font-bold text-white">Backoffice de analítica</h3>
+                            </div>
+                            <p class="text-slate-400 text-sm leading-relaxed">Auditoría, resolución autónoma y telemetría avanzada.</p>
                         </div>
-                        <p class="text-slate-300 text-sm leading-relaxed">
-                            Plataforma interna para auditoría de trazabilidad de conversaciones, métricas de tasa de resolución autónoma y filtros avanzados de telemetría.
-                        </p>
-                    </div>
 
-                    <div class="bg-slate-950/70 p-5 rounded-xl border border-teal-950/80">
-                        <div class="font-mono text-cyber-teal text-xs mb-2 font-semibold flex items-center gap-2">
-                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3Z"/><path d="M9 12l2 2 4-4"/></svg> CICLO COMPLETO DE PRODUCTO
+                        <div class="reveal glass-card rounded-2xl p-6" style="--rd:.26s">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="text-cyber-emerald" aria-hidden="true"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3Z"/><path d="M9 12l2 2 4-4"/></svg></span>
+                                <h3 class="text-xl font-bold text-white">Producto end-to-end</h3>
+                            </div>
+                            <p class="text-slate-400 text-sm leading-relaxed">Del dolor operativo del soporte a producción con KPIs.</p>
                         </div>
-                        <p class="text-slate-300 text-sm leading-relaxed">
-                            Desde el análisis del dolor operativo del equipo de soporte hasta la puesta en producción y refinamiento continuo basado en KPIs de usuario.
-                        </p>
+                    </div>
+
+                    <div class="reveal mt-8 flex flex-wrap gap-2 font-mono text-xs" style="--rd:.33s">
+                        <span class="px-3 py-1.5 bg-slate-950 border border-cyber-border/60 text-slate-300 rounded-lg">TypeScript</span>
+                        <span class="px-3 py-1.5 bg-slate-950 border border-cyber-border/60 text-slate-300 rounded-lg">React</span>
+                        <span class="px-3 py-1.5 bg-slate-950 border border-cyber-border/60 text-slate-300 rounded-lg">Next.js</span>
+                        <span class="px-3 py-1.5 bg-slate-950 border border-cyber-border/60 text-slate-300 rounded-lg">pnpm monorepo</span>
+                        <span class="px-3 py-1.5 bg-slate-950 border border-cyber-border/60 text-slate-300 rounded-lg">Streaming API</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="slide" id="capacidades" data-label="Capacidades">
+                <div class="slide-content max-w-5xl mx-auto px-4 w-full">
+                    <div class="reveal">
+                        <span class="font-mono text-xs text-cyber-amber tracking-[0.25em] uppercase">// CORE CAPABILITIES</span>
+                        <h2 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mt-2 mb-10">Sistemas distribuidos &amp; flujos AI-driven</h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                        <div class="reveal glass-card rounded-2xl p-6" style="--rd:.05s">
+                            <div class="w-11 h-11 rounded-xl bg-cyber-emerald/10 border border-cyber-emerald/30 text-cyber-emerald flex items-center justify-center mb-4 font-mono text-lg" aria-hidden="true">&lt;/&gt;</div>
+                            <h3 class="text-xl font-bold text-white mb-2">Backend resiliente</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed">Hexagonal, idempotencia, concurrencia (HTTP 409) y compensación.</p>
+                        </div>
+
+                        <div class="reveal glass-card rounded-2xl p-6" style="--rd:.12s">
+                            <div class="w-11 h-11 rounded-xl bg-cyber-orange/10 border border-cyber-orange/30 text-cyber-orange flex items-center justify-center mb-4 font-mono text-lg" aria-hidden="true">AI</div>
+                            <h3 class="text-xl font-bold text-white mb-2">MCP &amp; agentes IA</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed">Spec-driven con ATDD/TDD, bots de PRs y orquestación con MCP.</p>
+                        </div>
+
+                        <div class="reveal glass-card rounded-2xl p-6" style="--rd:.19s">
+                            <div class="w-11 h-11 rounded-xl bg-cyber-pink/10 border border-cyber-pink/30 text-cyber-pink flex items-center justify-center mb-4 font-mono text-lg" aria-hidden="true">API</div>
+                            <h3 class="text-xl font-bold text-white mb-2">Contract-first &amp; DevOps</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed">OpenAPI/AsyncAPI con Zod, Grafana, Loki y Sentry sobre Kubernetes.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="slide" id="trayectoria" data-label="Trayectoria">
+                <div class="slide-content max-w-5xl mx-auto px-4 w-full">
+                    <div class="reveal">
+                        <span class="font-mono text-xs text-cyber-amber tracking-[0.25em] uppercase">// CAREER</span>
+                        <h2 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mt-2 mb-10">Trayectoria</h2>
+                    </div>
+
+                    <div class="space-y-5">
+                        <div class="reveal glass-card rounded-2xl p-6 flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-6" style="--rd:.05s">
+                            <span class="font-mono text-xs text-cyber-emerald w-36 shrink-0">2024 – Presente</span>
+                            <div>
+                                <h3 class="text-lg sm:text-xl font-bold text-white">Product Engineer (AI Support) &amp; Tech Lead · Civitatis</h3>
+                                <p class="text-slate-400 text-sm mt-1">Asistente IA end-to-end, SDKs TypeScript y agentes MCP.</p>
+                            </div>
+                        </div>
+
+                        <div class="reveal glass-card rounded-2xl p-6 flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-6" style="--rd:.12s">
+                            <span class="font-mono text-xs text-cyber-orange w-36 shrink-0">2018 – 2023</span>
+                            <div>
+                                <h3 class="text-lg sm:text-xl font-bold text-white">Full Stack Senior Developer / Tech Lead · Uniway Technologies</h3>
+                                <p class="text-slate-400 text-sm mt-1">E-commerce multicloud, intranet corporativa y Clean Architecture.</p>
+                            </div>
+                        </div>
+
+                        <div class="reveal glass-card rounded-2xl p-6 flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-6" style="--rd:.19s">
+                            <span class="font-mono text-xs text-cyber-pink w-36 shrink-0">2017 – 2018</span>
+                            <div>
+                                <h3 class="text-lg sm:text-xl font-bold text-white">Full Stack Developer · GreenByte / NWCyO</h3>
+                                <p class="text-slate-400 text-sm mt-1">APIs Django, React Native y desarrollo web.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="slide" id="stack" data-label="Stack">
+                <div class="slide-content max-w-5xl mx-auto px-4 w-full">
+                    <div class="reveal">
+                        <span class="font-mono text-xs text-cyber-amber tracking-[0.25em] uppercase">// TOOLING</span>
+                        <h2 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mt-2 mb-10">Stack</h2>
+                    </div>
+
+                    <div class="space-y-6 font-mono text-sm">
+                        <div class="reveal" style="--rd:.05s">
+                            <h3 class="text-xs uppercase tracking-widest text-slate-500 mb-3">Core</h3>
+                            <div class="flex flex-wrap gap-2.5">
+                                <span class="px-4 py-2 glass-card rounded-xl text-slate-100">TypeScript</span>
+                                <span class="px-4 py-2 glass-card rounded-xl text-slate-100">React / Next.js</span>
+                                <span class="px-4 py-2 glass-card rounded-xl text-slate-100">Node.js</span>
+                                <span class="px-4 py-2 glass-card rounded-xl text-slate-100">PHP / Symfony</span>
+                                <span class="px-4 py-2 glass-card rounded-xl text-slate-100">Python</span>
+                            </div>
+                        </div>
+                        <div class="reveal" style="--rd:.12s">
+                            <h3 class="text-xs uppercase tracking-widest text-slate-500 mb-3">Datos &amp; plataforma</h3>
+                            <div class="flex flex-wrap gap-2.5">
+                                <span class="px-4 py-2 glass-card rounded-xl text-slate-100">MySQL</span>
+                                <span class="px-4 py-2 glass-card rounded-xl text-slate-100">ElasticSearch</span>
+                                <span class="px-4 py-2 glass-card rounded-xl text-slate-100">Redis</span>
+                                <span class="px-4 py-2 glass-card rounded-xl text-slate-100">Docker</span>
+                                <span class="px-4 py-2 glass-card rounded-xl text-slate-100">Kubernetes</span>
+                                <span class="px-4 py-2 glass-card rounded-xl text-slate-100">Jenkins</span>
+                            </div>
+                        </div>
+                        <div class="reveal" style="--rd:.19s">
+                            <h3 class="text-xs uppercase tracking-widest text-slate-500 mb-3">IA &amp; agentes</h3>
+                            <div class="flex flex-wrap gap-2.5">
+                                <span class="px-4 py-2 rounded-xl border border-cyber-emerald/40 bg-cyber-emerald/10 text-cyber-emerald glass-card">MCP</span>
+                                <span class="px-4 py-2 rounded-xl border border-cyber-orange/40 bg-cyber-orange/10 text-cyber-orange glass-card">Claude Code / AI Agents</span>
+                                <span class="px-4 py-2 rounded-xl border border-cyber-pink/40 bg-cyber-pink/10 text-cyber-pink glass-card">Spec-Driven / Zod</span>
+                                <span class="px-4 py-2 glass-card rounded-xl text-slate-100">OpenAPI / AsyncAPI</span>
+                            </div>
+                        </div>
+                        <div class="reveal" style="--rd:.26s">
+                            <h3 class="text-xs uppercase tracking-widest text-slate-500 mb-3">Observabilidad &amp; cloud</h3>
+                            <div class="flex flex-wrap gap-2.5">
+                                <span class="px-4 py-2 glass-card rounded-xl text-slate-100">Grafana / Loki / Sentry</span>
+                                <span class="px-4 py-2 glass-card rounded-xl text-slate-100">AWS / Azure / GCP</span>
+                                <span class="px-4 py-2 glass-card rounded-xl text-slate-100">OVH / VMware</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="slide" id="contacto" data-label="Contacto">
+                <div class="slide-content max-w-5xl mx-auto px-4 w-full text-center">
+                    <div class="reveal">
+                        <span class="font-mono text-xs text-cyber-amber tracking-[0.25em] uppercase">// CONTACT</span>
+                    </div>
+                    <h2 class="reveal text-5xl sm:text-7xl font-extrabold tracking-tight text-white mt-4 mb-6" data-depth="6">
+                        ¿Construimos<br>
+                        <span class="bg-gradient-to-r from-cyber-emerald via-cyber-orange to-cyber-pink bg-clip-text text-transparent">algo juntos?</span>
+                    </h2>
+                    <p class="reveal text-slate-400 text-lg sm:text-xl max-w-xl mx-auto mb-10 font-light">Producto, arquitectura y equipos AI-First.</p>
+
+                    <div class="reveal flex flex-wrap justify-center gap-3 sm:gap-4 font-mono text-xs sm:text-sm">
+                        <a href="mailto:caste_acm@hotmail.com" class="bg-cyber-emerald text-slate-950 hover:bg-cyber-mint px-6 py-3 rounded-xl font-bold transition shadow-lg shadow-cyber-emerald/25 flex items-center gap-2">
+                            <svg class="w-4 h-4" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/></svg>
+                            caste_acm@hotmail.com
+                        </a>
+                        <button id="copyEmail" type="button" class="glass-card hover:bg-emerald-950/30 text-slate-200 px-6 py-3 rounded-xl font-medium transition flex items-center gap-2" data-email="caste_acm@hotmail.com">
+                            <svg class="w-4 h-4 text-cyber-emerald" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                            <span id="copyEmailLabel" aria-live="polite">COPIAR EMAIL</span>
+                        </button>
+                        <a href="https://linkedin.com/in/alberto-castellanos-martinez" target="_blank" rel="noopener noreferrer" class="glass-card hover:bg-pink-950/30 text-slate-200 px-6 py-3 rounded-xl font-medium transition flex items-center gap-2">
+                            <svg class="w-4 h-4 text-cyber-pink" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>
+                            LINKEDIN
+                        </a>
+                        <a href="assets/Alberto_Castellanos_Martinez_CV.pdf" download class="glass-card hover:bg-orange-950/30 text-slate-200 px-6 py-3 rounded-xl font-medium transition flex items-center gap-2">
+                            <svg class="w-4 h-4 text-cyber-orange" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 19h16"/></svg>
+                            CV PDF
+                        </a>
                     </div>
                 </div>
 
-                <div class="mt-8 pt-6 border-t border-teal-950/80 flex flex-wrap gap-2 font-mono text-xs">
-                    <span class="px-3 py-1 bg-slate-950 border border-teal-900/40 text-slate-300 rounded-md">TypeScript</span>
-                    <span class="px-3 py-1 bg-slate-950 border border-teal-900/40 text-slate-300 rounded-md">React</span>
-                    <span class="px-3 py-1 bg-slate-950 border border-teal-900/40 text-slate-300 rounded-md">Next.js</span>
-                    <span class="px-3 py-1 bg-slate-950 border border-teal-900/40 text-slate-300 rounded-md">pnpm monorepo</span>
-                    <span class="px-3 py-1 bg-slate-950 border border-teal-900/40 text-slate-300 rounded-md">Streaming API</span>
-                    <span class="px-3 py-1 bg-slate-950 border border-teal-900/40 text-slate-300 rounded-md">AI Support</span>
+                <div class="absolute bottom-6 inset-x-0 font-mono text-[10px] text-slate-500 flex flex-wrap justify-center gap-x-3 gap-y-1 px-4">
+                    <span>&copy; <span id="year">2026</span> Alberto Castellanos Martínez</span>
+                    <span class="text-slate-700" aria-hidden="true">//</span>
+                    <span>STATUS: <span class="text-cyber-emerald font-semibold">OPERATIONAL</span></span>
+                    <span class="text-slate-700" aria-hidden="true">//</span>
+                    <span>GitHub Pages</span>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="architecture" class="max-w-5xl mx-auto px-4 py-12">
-            <div class="reveal mb-8">
-                <span class="font-mono text-xs text-cyber-teal tracking-widest uppercase">// CORE CAPABILITIES</span>
-                <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Sistemas Distribuidos &amp; Flujos AI-Driven</h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="reveal glass-card rounded-xl p-6">
-                    <div class="w-10 h-10 rounded-lg bg-cyber-teal/10 border border-cyber-teal/30 text-cyber-teal flex items-center justify-center text-lg mb-4 font-mono" aria-hidden="true">
-                        &lt;/&gt;
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">Backend Resiliente</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed font-mono">
-                        Arquitectura Hexagonal en backend. Claves de idempotencia, manejo de concurrencia (HTTP 409) y patrones de compensación en operaciones críticas.
-                    </p>
-                </div>
-
-                <div class="reveal glass-card rounded-xl p-6">
-                    <div class="w-10 h-10 rounded-lg bg-cyber-emerald/10 border border-cyber-emerald/30 text-cyber-emerald flex items-center justify-center text-lg mb-4 font-mono" aria-hidden="true">
-                        AI
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">MCP &amp; Agentes IA</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed font-mono">
-                        Flujos Spec-driven con ATDD/TDD. Bots autónomos de PRs y panel local PWA para orquestación de agentes con integraciones mediante MCP.
-                    </p>
-                </div>
-
-                <div class="reveal glass-card rounded-xl p-6">
-                    <div class="w-10 h-10 rounded-lg bg-cyber-cyan/10 border border-cyber-cyan/30 text-cyber-cyan flex items-center justify-center text-lg mb-4 font-mono" aria-hidden="true">
-                        API
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">Contract-First &amp; DevOps</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed font-mono">
-                        APIs diseñadas con OpenAPI/AsyncAPI y validadas con Zod. Observabilidad con Grafana, Loki y Sentry sobre entornos Kubernetes (Tilt).
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section id="proceso" class="max-w-5xl mx-auto px-4 py-12">
-            <div class="reveal mb-8">
-                <span class="font-mono text-xs text-cyber-teal tracking-widest uppercase">// HOW I WORK</span>
-                <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">De la idea al impacto en producción</h2>
-                <p class="text-slate-400 text-sm mt-2 max-w-2xl leading-relaxed">Un proceso iterativo, con decisiones explícitas y medición desde el primer día.</p>
-            </div>
-
-            <ol class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <li class="reveal glass-card rounded-xl p-5">
-                    <span class="font-mono text-xs text-cyber-emerald">01</span>
-                    <h3 class="text-white font-bold mt-2 mb-1">Descubrir</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed">Entender el problema de negocio y el dolor operativo antes de escribir código.</p>
-                </li>
-                <li class="reveal glass-card rounded-xl p-5">
-                    <span class="font-mono text-xs text-cyber-emerald">02</span>
-                    <h3 class="text-white font-bold mt-2 mb-1">Diseñar</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed">Arquitectura hexagonal, contratos OpenAPI/AsyncAPI y decisiones documentadas.</p>
-                </li>
-                <li class="reveal glass-card rounded-xl p-5">
-                    <span class="font-mono text-xs text-cyber-emerald">03</span>
-                    <h3 class="text-white font-bold mt-2 mb-1">Construir</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed">Backend y frontend TypeScript, SDKs, streaming y pruebas ATDD/TDD.</p>
-                </li>
-                <li class="reveal glass-card rounded-xl p-5">
-                    <span class="font-mono text-xs text-cyber-emerald">04</span>
-                    <h3 class="text-white font-bold mt-2 mb-1">Desplegar y medir</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed">Producción en Kubernetes, observabilidad y refinamiento guiado por KPIs.</p>
-                </li>
-            </ol>
-        </section>
-
-        <section id="trayectoria" class="max-w-5xl mx-auto px-4 py-12">
-            <div class="reveal mb-8">
-                <span class="font-mono text-xs text-cyber-teal tracking-widest uppercase">// CAREER TIMELINE</span>
-                <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Trayectoria Profesional</h2>
-            </div>
-
-            <div class="relative border-l-2 border-teal-950/80 ml-2 pl-6 sm:pl-8 space-y-10">
-                <div class="reveal relative">
-                    <span class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-cyber-teal border-4 border-slate-950" aria-hidden="true"></span>
-                    <div class="font-mono text-xs text-cyber-teal uppercase">2024 – Presente</div>
-                    <h3 class="text-lg sm:text-xl font-bold text-white mt-1">Product Engineer (AI Support) &amp; Tech Lead · Civitatis</h3>
-                    <p class="text-slate-400 text-sm mt-2 max-w-3xl leading-relaxed">
-                        Liderazgo técnico y ejecución end-to-end del asistente de atención al cliente con IA, definición de arquitecturas backend resilientes y optimización del flujo de ingeniería mediante agentes e integración MCP.
-                    </p>
-                </div>
-
-                <div class="reveal relative">
-                    <span class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-slate-700 border-4 border-slate-950" aria-hidden="true"></span>
-                    <div class="font-mono text-xs text-slate-500 uppercase">2018 – 2023</div>
-                    <h3 class="text-lg sm:text-xl font-bold text-white mt-1">Full Stack Senior Developer / Tech Lead · Uniway Technologies</h3>
-                    <p class="text-slate-400 text-sm mt-2 max-w-3xl leading-relaxed">
-                        Desarrollo de líneas de negocio clave (e-commerce multicloud, aplicación web para clientes e intranet corporativa). Transición hacia Clean Architecture, DDD y orquestación de procesos con Camunda BPMN.
-                    </p>
-                </div>
-
-                <div class="reveal relative">
-                    <span class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-slate-800 border-4 border-slate-950" aria-hidden="true"></span>
-                    <div class="font-mono text-xs text-slate-500 uppercase">2017 – 2018</div>
-                    <h3 class="text-lg sm:text-xl font-bold text-white mt-1">Full Stack Developer · GreenByte / NWCyO</h3>
-                    <p class="text-slate-400 text-sm mt-2 max-w-3xl leading-relaxed">
-                        APIs RESTful con Django/Python, apps móviles con React Native y desarrollo web con Vue, Prestashop y WordPress.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section id="stack" class="max-w-5xl mx-auto px-4 py-12">
-            <div class="reveal mb-6">
-                <span class="font-mono text-xs text-cyber-teal tracking-widest uppercase">// TOOLING &amp; LANGUAGES</span>
-                <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Stack Tecnológico</h2>
-            </div>
-
-            <div class="reveal space-y-5">
-                <div>
-                    <h3 class="font-mono text-xs text-slate-500 uppercase tracking-widest mb-2">Lenguajes &amp; runtime</h3>
-                    <div class="flex flex-wrap gap-2.5 font-mono text-xs">
-                        <span class="px-3.5 py-2 glass-card rounded-lg text-slate-200">TypeScript</span>
-                        <span class="px-3.5 py-2 glass-card rounded-lg text-slate-200">Node.js</span>
-                        <span class="px-3.5 py-2 glass-card rounded-lg text-slate-200">SQL</span>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="font-mono text-xs text-slate-500 uppercase tracking-widest mb-2">Frontend</h3>
-                    <div class="flex flex-wrap gap-2.5 font-mono text-xs">
-                        <span class="px-3.5 py-2 glass-card rounded-lg text-slate-200">React</span>
-                        <span class="px-3.5 py-2 glass-card rounded-lg text-slate-200">Next.js</span>
-                        <span class="px-3.5 py-2 glass-card rounded-lg text-slate-200">Tailwind CSS</span>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="font-mono text-xs text-slate-500 uppercase tracking-widest mb-2">Backend &amp; datos</h3>
-                    <div class="flex flex-wrap gap-2.5 font-mono text-xs">
-                        <span class="px-3.5 py-2 glass-card rounded-lg text-slate-200">MySQL</span>
-                        <span class="px-3.5 py-2 glass-card rounded-lg text-slate-200">APIs REST / Streaming</span>
-                        <span class="px-3.5 py-2 glass-card rounded-lg text-slate-200">Arquitectura Hexagonal</span>
-                        <span class="px-3.5 py-2 glass-card rounded-lg text-slate-200">OpenAPI / AsyncAPI</span>
-                        <span class="px-3.5 py-2 glass-card rounded-lg text-slate-200">Zod</span>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="font-mono text-xs text-slate-500 uppercase tracking-widest mb-2">Plataforma &amp; observabilidad</h3>
-                    <div class="flex flex-wrap gap-2.5 font-mono text-xs">
-                        <span class="px-3.5 py-2 glass-card rounded-lg text-slate-200">Docker</span>
-                        <span class="px-3.5 py-2 glass-card rounded-lg text-slate-200">Kubernetes</span>
-                        <span class="px-3.5 py-2 glass-card rounded-lg text-slate-200">Tilt</span>
-                        <span class="px-3.5 py-2 glass-card rounded-lg text-slate-200">Grafana / Loki / Sentry</span>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="font-mono text-xs text-slate-500 uppercase tracking-widest mb-2">IA &amp; agentes</h3>
-                    <div class="flex flex-wrap gap-2.5 font-mono text-xs">
-                        <span class="px-3.5 py-2 glass-card rounded-lg text-cyber-teal border-cyber-teal/30 bg-cyber-teal/5">MCP (Model Context Protocol)</span>
-                        <span class="px-3.5 py-2 glass-card rounded-lg text-cyber-emerald border-cyber-emerald/30 bg-cyber-emerald/5">Claude Code / AI Agents</span>
-                        <span class="px-3.5 py-2 glass-card rounded-lg text-slate-200">Spec-Driven Development</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contacto" class="max-w-5xl mx-auto px-4 py-12 mb-16">
-            <div class="reveal glass-card rounded-2xl p-6 sm:p-10 text-center relative overflow-hidden">
-                <span class="font-mono text-xs text-cyber-teal tracking-widest uppercase">// CONTACT</span>
-                <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-2 mb-3">¿Construimos algo juntos?</h2>
-                <p class="text-slate-400 max-w-2xl mx-auto mb-8 leading-relaxed">
-                    Abierto a conversar sobre producto, arquitectura de sistemas y equipos que trabajan con una cultura AI-First.
-                </p>
-                <div class="flex flex-wrap justify-center gap-3 font-mono text-xs">
-                    <a href="mailto:caste_acm@hotmail.com" class="bg-cyber-teal text-slate-950 hover:bg-teal-300 px-6 py-3 rounded-lg font-bold transition flex items-center gap-2 shadow-lg shadow-cyber-teal/20">
-                        <svg class="w-4 h-4" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/></svg>
-                        caste_acm@hotmail.com
-                    </a>
-                    <button id="copyEmail" type="button" class="glass-card hover:bg-teal-950/40 text-slate-300 px-6 py-3 rounded-lg font-medium transition flex items-center gap-2" data-email="caste_acm@hotmail.com">
-                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                        <span id="copyEmailLabel" aria-live="polite">COPIAR EMAIL</span>
-                    </button>
-                    <a href="https://linkedin.com/in/alberto-castellanos-martinez" target="_blank" rel="noopener noreferrer" class="glass-card hover:bg-teal-950/40 text-slate-300 px-6 py-3 rounded-lg font-medium transition flex items-center gap-2">
-                        <svg class="w-4 h-4" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>
-                        LINKEDIN
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="border-t border-teal-950/80 py-8 bg-slate-950 font-mono text-xs text-slate-500 text-center">
-        <div class="max-w-5xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3">
-            <span>&copy; <span id="year">2026</span> Alberto Castellanos Martínez</span>
-            <span class="hidden sm:inline text-slate-700" aria-hidden="true">//</span>
-            <span>System status: <span class="text-cyber-emerald font-semibold">ALL SYSTEMS OPERATIONAL</span></span>
-            <span class="hidden sm:inline text-slate-700" aria-hidden="true">//</span>
-            <span>Hosted on GitHub Pages</span>
         </div>
-    </footer>
+    </div>
+    <div id="spacer" aria-hidden="true"></div>
 
     <script>
         (function () {
-            const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            var finePointer = window.matchMedia('(pointer: fine)').matches;
+            var track = document.getElementById('track');
+            var spacer = document.getElementById('spacer');
+            var progressBar = document.getElementById('progress');
+            var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+            var dotsNav = document.getElementById('dots');
+            var vh = window.innerHeight;
+            var current = window.scrollY || 0;
+            var maxScroll = 0;
 
-            const ambientGlow = document.getElementById('ambientGlow');
-            let rafId = null;
-            let lastX = 0;
-            let lastY = 0;
+            function measure() {
+                vh = window.innerHeight;
+                spacer.style.height = (slides.length * vh) + 'px';
+                maxScroll = Math.max(1, document.documentElement.scrollHeight - vh);
+            }
 
-            if (ambientGlow && !reduceMotion) {
+            measure();
+            window.addEventListener('resize', measure);
+
+            var dots = slides.map(function (slide, i) {
+                var btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'dot';
+                btn.setAttribute('aria-label', slide.dataset.label || ('Sección ' + (i + 1)));
+                btn.addEventListener('click', function () {
+                    window.scrollTo({ top: i * vh, behavior: reduceMotion ? 'auto' : 'auto' });
+                });
+                dotsNav.appendChild(btn);
+                return btn;
+            });
+
+            var logo = document.getElementById('logo');
+            if (logo) {
+                logo.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0 });
+                });
+            }
+
+            if (finePointer && !reduceMotion) {
+                document.body.classList.add('has-custom-cursor');
+                var dot = document.getElementById('cursorDot');
+                var ring = document.getElementById('cursorRing');
+                var glow = document.getElementById('ambientGlow');
+                var parallaxItems = Array.prototype.slice.call(document.querySelectorAll('[data-depth]'));
+                var mx = window.innerWidth / 2, my = window.innerHeight / 2;
+                var rx = mx, ry = my;
+
+                var cursorLoop = function () {
+                    rx += (mx - rx) * 0.18;
+                    ry += (my - ry) * 0.18;
+                    ring.style.transform = 'translate3d(' + rx + 'px,' + ry + 'px,0) translate(-50%,-50%)';
+                    var cx = window.innerWidth / 2, cy = window.innerHeight / 2;
+                    parallaxItems.forEach(function (item) {
+                        var depth = parseFloat(item.getAttribute('data-depth')) || 0;
+                        item.style.transform = 'translate3d(' + ((cx - mx) * depth / 22) + 'px,' + ((cy - my) * depth / 22) + 'px,0)';
+                    });
+                    window.requestAnimationFrame(cursorLoop);
+                };
+
                 document.addEventListener('mousemove', function (e) {
-                    lastX = e.clientX;
-                    lastY = e.clientY;
-                    if (rafId) return;
-                    rafId = window.requestAnimationFrame(function () {
-                        ambientGlow.style.setProperty('--mouse-x', lastX + 'px');
-                        ambientGlow.style.setProperty('--mouse-y', lastY + 'px');
-                        rafId = null;
-                    });
+                    mx = e.clientX; my = e.clientY;
+                    dot.style.transform = 'translate3d(' + mx + 'px,' + my + 'px,0) translate(-50%,-50%)';
+                    if (glow) {
+                        glow.style.setProperty('--mouse-x', mx + 'px');
+                        glow.style.setProperty('--mouse-y', my + 'px');
+                    }
+                    mouse.cx = mx; mouse.cy = my;
+                    if (!cursorLoopStarted) {
+                        cursorLoopStarted = true;
+                        dot.classList.add('is-visible');
+                        ring.classList.add('is-visible');
+                        window.requestAnimationFrame(cursorLoop);
+                    }
                 }, { passive: true });
-            }
+                var cursorLoopStarted = false;
 
-            const cards = document.querySelectorAll('.glass-card');
-            if (!reduceMotion) {
-                cards.forEach(function (card) {
-                    card.addEventListener('mousemove', function (e) {
-                        const rect = card.getBoundingClientRect();
-                        card.style.setProperty('--card-mouse-x', (e.clientX - rect.left) + 'px');
-                        card.style.setProperty('--card-mouse-y', (e.clientY - rect.top) + 'px');
-                    }, { passive: true });
+                var hoverables = document.querySelectorAll('a, button, .glass-card');
+                Array.prototype.forEach.call(hoverables, function (el) {
+                    el.addEventListener('mouseenter', function () { ring.classList.add('is-active'); });
+                    el.addEventListener('mouseleave', function () { ring.classList.remove('is-active'); });
                 });
             }
 
-            const menuToggle = document.getElementById('menuToggle');
-            const mobileMenu = document.getElementById('mobileMenu');
-            const menuIconOpen = document.getElementById('menuIconOpen');
-            const menuIconClose = document.getElementById('menuIconClose');
+            var canvas = document.getElementById('fx');
+            var ctx = canvas.getContext('2d');
+            var particles = [];
+            var COLORS = ['16,185,129', '236,72,153', '245,158,11'];
+            var mouse = { cx: -9999, cy: -9999 };
 
-            function setMenu(open) {
-                if (!mobileMenu || !menuToggle) return;
-                mobileMenu.classList.toggle('hidden', !open);
-                menuToggle.setAttribute('aria-expanded', String(open));
-                menuToggle.setAttribute('aria-label', open ? 'Cerrar menú de navegación' : 'Abrir menú de navegación');
-                if (menuIconOpen) menuIconOpen.classList.toggle('hidden', open);
-                if (menuIconClose) menuIconClose.classList.toggle('hidden', !open);
-            }
-
-            if (menuToggle && mobileMenu) {
-                menuToggle.addEventListener('click', function () {
-                    setMenu(mobileMenu.classList.contains('hidden'));
-                });
-                mobileMenu.querySelectorAll('a').forEach(function (link) {
-                    link.addEventListener('click', function () { setMenu(false); });
-                });
-                document.addEventListener('keydown', function (e) {
-                    if (e.key === 'Escape') setMenu(false);
-                });
-            }
-
-            const navLinks = Array.prototype.slice.call(document.querySelectorAll('[data-nav]'));
-            const sections = navLinks
-                .map(function (link) { return document.querySelector(link.getAttribute('href')); })
-                .filter(Boolean);
-
-            if ('IntersectionObserver' in window && sections.length) {
-                const navObserver = new IntersectionObserver(function (entries) {
-                    entries.forEach(function (entry) {
-                        if (!entry.isIntersecting) return;
-                        navLinks.forEach(function (link) {
-                            const active = link.getAttribute('href') === '#' + entry.target.id;
-                            link.classList.toggle('text-cyber-teal', active);
-                            link.classList.toggle('text-slate-400', !active);
-                            if (active) {
-                                link.setAttribute('aria-current', 'true');
-                            } else {
-                                link.removeAttribute('aria-current');
-                            }
-                        });
+            function initParticles() {
+                particles = [];
+                var count = Math.min(80, Math.round(window.innerWidth * window.innerHeight / 22000));
+                for (var i = 0; i < count; i++) {
+                    particles.push({
+                        x: Math.random() * canvas.width,
+                        y: Math.random() * canvas.height,
+                        vx: (Math.random() - 0.5) * 0.35,
+                        vy: (Math.random() - 0.5) * 0.35,
+                        r: Math.random() * 1.6 + 0.6,
+                        c: COLORS[i % COLORS.length]
                     });
-                }, { rootMargin: '-45% 0px -50% 0px' });
-                sections.forEach(function (section) { navObserver.observe(section); });
+                }
             }
 
-            const revealItems = document.querySelectorAll('.reveal');
-            if (!reduceMotion && 'IntersectionObserver' in window) {
-                const revealObserver = new IntersectionObserver(function (entries, observer) {
-                    entries.forEach(function (entry) {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('is-visible');
-                            observer.unobserve(entry.target);
+            function sizeCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+                initParticles();
+            }
+            sizeCanvas();
+            window.addEventListener('resize', sizeCanvas);
+
+            function drawFx() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                var i, j, p, q, ddx, ddy, dist;
+                for (i = 0; i < particles.length; i++) {
+                    p = particles[i];
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    ddx = p.x - mouse.cx; ddy = p.y - mouse.cy;
+                    dist = Math.sqrt(ddx * ddx + ddy * ddy);
+                    if (dist < 130 && dist > 0.01) {
+                        p.x += (ddx / dist) * 0.55;
+                        p.y += (ddy / dist) * 0.55;
+                    }
+                    if (p.x < -20) p.x = canvas.width + 20;
+                    if (p.x > canvas.width + 20) p.x = -20;
+                    if (p.y < -20) p.y = canvas.height + 20;
+                    if (p.y > canvas.height + 20) p.y = -20;
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                    ctx.fillStyle = 'rgba(' + p.c + ',0.45)';
+                    ctx.fill();
+                    for (j = i + 1; j < particles.length; j++) {
+                        q = particles[j];
+                        var dx = p.x - q.x, dy = p.y - q.y;
+                        var d2 = dx * dx + dy * dy;
+                        if (d2 < 110 * 110) {
+                            var a = (1 - Math.sqrt(d2) / 110) * 0.12;
+                            ctx.beginPath();
+                            ctx.moveTo(p.x, p.y);
+                            ctx.lineTo(q.x, q.y);
+                            ctx.strokeStyle = 'rgba(' + p.c + ',' + a.toFixed(3) + ')';
+                            ctx.lineWidth = 1;
+                            ctx.stroke();
                         }
-                    });
-                }, { threshold: 0.12 });
-                revealItems.forEach(function (el) { revealObserver.observe(el); });
-            } else {
-                revealItems.forEach(function (el) { el.classList.add('is-visible'); });
+                    }
+                }
             }
 
-            const copyBtn = document.getElementById('copyEmail');
-            const copyLabel = document.getElementById('copyEmailLabel');
+            var clamp = function (v, min, max) { return Math.max(min, Math.min(max, v)); };
+
+            function frame() {
+                var target = window.scrollY || 0;
+                var diff = target - current;
+                if (reduceMotion) {
+                    current = target;
+                } else {
+                    current += diff * 0.085;
+                    if (Math.abs(target - current) < 0.05) current = target;
+                }
+
+                var skew = clamp((target - current) * 0.012, -2.2, 2.2);
+                track.style.transform = 'translate3d(0,' + (-current) + 'px,0) skewY(' + skew + 'deg)';
+
+                if (progressBar) {
+                    progressBar.style.transform = 'scaleX(' + clamp(current / maxScroll, 0, 1) + ')';
+                }
+
+                var activeIdx = clamp(Math.round(current / vh), 0, slides.length - 1);
+                dots.forEach(function (d, i) { d.classList.toggle('is-active', i === activeIdx); });
+
+                slides.forEach(function (slide, i) {
+                    var p = (slide.offsetTop - current) / vh;
+                    var inView = p > -0.85 && p < 0.85;
+                    slide.classList.toggle('in-view', inView);
+                    var content = slide.querySelector('.slide-content');
+                    if (content) {
+                        content.style.transform = 'translate3d(0,' + (p * 55) + 'px,0)';
+                        content.style.opacity = String(clamp(1 - Math.abs(p) * 0.9, 0.25, 1));
+                    }
+                });
+
+                drawFx();
+                window.requestAnimationFrame(frame);
+            }
+            frame();
+
+            var copyBtn = document.getElementById('copyEmail');
+            var copyLabel = document.getElementById('copyEmailLabel');
             if (copyBtn && copyLabel) {
                 copyBtn.addEventListener('click', function () {
-                    const email = copyBtn.getAttribute('data-email');
-                    const done = function () {
+                    var email = copyBtn.getAttribute('data-email');
+                    var done = function () {
                         copyLabel.textContent = 'COPIADO';
                         window.setTimeout(function () { copyLabel.textContent = 'COPIAR EMAIL'; }, 2000);
                     };
@@ -514,7 +550,7 @@
                 });
             }
 
-            const year = document.getElementById('year');
+            var year = document.getElementById('year');
             if (year) year.textContent = String(new Date().getFullYear());
         })();
     </script>
