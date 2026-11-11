@@ -123,6 +123,75 @@
         animation: blink 1s infinite;
     }
 
+    .orbit-wrap {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 4rem;
+    }
+
+    .orbit-tilt {
+        position: relative;
+        transform-style: preserve-3d;
+        transform: perspective(700px) rotateX(var(--oy, 0deg)) rotateY(var(--ox, 0deg));
+        will-change: transform;
+    }
+
+    .orbit {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 9999px;
+        pointer-events: none;
+        animation: orbit-spin 16s linear infinite;
+    }
+
+    .orbit-1 {
+        width: 160px;
+        height: 160px;
+        border: 1px dashed rgba(16, 185, 129, 0.4);
+    }
+
+    .orbit-2 {
+        width: 206px;
+        height: 206px;
+        border: 1px solid rgba(236, 72, 153, 0.3);
+        animation-duration: 24s;
+        animation-direction: reverse;
+    }
+
+    .orbit-3 {
+        width: 252px;
+        height: 252px;
+        border: 1px dashed rgba(245, 158, 11, 0.28);
+        animation-duration: 32s;
+    }
+
+    .orbit-dot {
+        position: absolute;
+        top: -4px;
+        left: 50%;
+        width: 7px;
+        height: 7px;
+        border-radius: 9999px;
+        transform: translateX(-50%);
+    }
+
+    .dot-emerald {
+        background: #34d399;
+        box-shadow: 0 0 10px rgba(52, 211, 153, 0.9);
+    }
+
+    .dot-pink {
+        background: #ec4899;
+        box-shadow: 0 0 10px rgba(236, 72, 153, 0.9);
+    }
+
+    .dot-amber {
+        background: #f59e0b;
+        box-shadow: 0 0 10px rgba(245, 158, 11, 0.9);
+    }
+
     .skip-link {
         position: absolute;
         left: -9999px;
@@ -291,6 +360,11 @@
     50% { opacity: 0; }
 }
 
+@keyframes orbit-spin {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
 @keyframes hint-bounce {
     0%, 100% { transform: translateX(-50%) translateY(0); }
     50% { transform: translateX(-50%) translateY(7px); }
@@ -364,7 +438,8 @@
 
     .animate-ping,
     .cursor-blink,
-    .scroll-hint {
+    .scroll-hint,
+    .orbit {
         animation: none;
     }
 
